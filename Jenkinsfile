@@ -4,30 +4,33 @@ pipeline {
 }
 
     stages {
-        stage('Build') {
+        stage('my-path') {
             steps {
                 script {
                     // Execute Linux commands
-                    sh 'echo "Running Linux commands"'
+                    sh 'echo "Current Location"'
+                    sh 'pwd'
+                    
                   }
             }
         }
         
-        stage('Test') {
+        stage('Creating-Directory') {
             steps {
                 script {
                     // Execute more Linux commands
-                    sh 'echo "Running tests"'
-                    
+                    sh 'echo "Creating Directory with Jenkinsfile"'
+                    sh 'mkdir testdirect'
                 }
             }
         }
 
-        stage('Deploy') {
+        stage('Verification') {
             steps {
                 script {
-                    // Execute deployment commands
-                    sh 'echo "Deploying application"'
+                    // Execute Verification commands
+                    sh 'echo "Verifying Directory"'
+                    sh 'ls -la'
                     
                 }
             }
