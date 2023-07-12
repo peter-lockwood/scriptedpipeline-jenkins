@@ -1,6 +1,6 @@
 pipeline {
-    agent { (‘test-worker-node’)
-
+    agent { 
+        node('test-worker-node')
 }
 
     stages {
@@ -9,10 +9,7 @@ pipeline {
                 script {
                     // Execute Linux commands
                     sh 'echo "Running Linux commands"'
-                    sh 'ls -la'
-                    sh 'mkdir my-directory'
-                    sh 'cp file.txt my-directory/'
-                }
+                  }
             }
         }
         
@@ -21,7 +18,7 @@ pipeline {
                 script {
                     // Execute more Linux commands
                     sh 'echo "Running tests"'
-                  
+                    
                 }
             }
         }
