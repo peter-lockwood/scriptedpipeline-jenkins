@@ -19,7 +19,7 @@ pipeline {
             steps {
                 script {
                     // Execute more Linux commands
-                    sh 'echo "Creating Directory with Jenkinsfile"'
+                    sh 'echo "Creating Directory"'
                     sh 'mkdir testdirect'
                 }
             }
